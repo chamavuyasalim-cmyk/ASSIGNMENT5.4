@@ -1,0 +1,153 @@
+:root {
+    /* Color variables */
+    --primary-color: #2563eb;
+    --secondary-color: #7c3aed;
+    --background-color: #f1f5f9;
+    --text-color: #1e293b;
+    --white-color: #ffffff;
+    --border-color: #dbe3ef;
+
+    /* Spacing variables */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 32px;
+
+    /* Font-size variables */
+    --font-small: 14px;
+    --font-medium: 18px;
+    --font-large: 32px;
+}
+
+/* Apply consistent sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: var(--font-medium);
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: var(--spacing-large);
+}
+
+.header h1 {
+    font-size: var(--font-large);
+    margin-bottom: var(--spacing-small);
+}
+
+.header p {
+    font-size: var(--font-small);
+}
+
+/* Main content */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: var(--spacing-large) var(--spacing-medium);
+}
+
+.intro {
+    background-color: var(--white-color);
+    padding: var(--spacing-large);
+    border-radius: 12px;
+    margin-bottom: var(--spacing-large);
+}
+
+h2 {
+    color: var(--primary-color);
+    font-size: var(--font-large);
+    margin-bottom: var(--spacing-medium);
+}
+
+.intro p {
+    margin-bottom: var(--spacing-medium);
+}
+
+/* Buttons */
+button {
+    border: none;
+    border-radius: 6px;
+    padding: var(--spacing-small) var(--spacing-medium);
+    font-size: var(--font-small);
+    cursor: pointer;
+    margin: var(--spacing-small) var(--spacing-small) 0 0;
+}
+
+.primary-button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.secondary-button {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+/* Cards section */
+.cards-section h2 {
+    margin-bottom: var(--spacing-medium);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-medium);
+}
+
+.card {
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: var(--spacing-large);
+}
+
+.card h3 {
+    color: var(--secondary-color);
+    font-size: var(--font-medium);
+    margin-bottom: var(--spacing-medium);
+}
+
+.card p {
+    font-size: var(--font-small);
+    margin-bottom: var(--spacing-medium);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--text-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: var(--spacing-medium);
+    font-size: var(--font-small);
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .container {
+        padding: var(--spacing-medium);
+    }
+}
